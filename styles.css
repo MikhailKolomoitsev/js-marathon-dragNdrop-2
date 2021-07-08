@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   background-color: #e5e5e5;
   display: flex;
   padding-top: 5rem;
@@ -56,9 +56,20 @@ body {
 }
 
 .progress {
-  background: linear-gradient(90deg, #209cff 0%, #68e0cf 100%);
+  background: linear-gradient(90deg, #209cff 0%, #419282 50%, #68e0cf 100%);
 }
 
 .done {
-  background: linear-gradient(90deg, #84fab0 0%, #8fd3f4 100%);
+  background: linear-gradient(90deg, #09ff63 0%, #eef0f1 100%);
+}
+
+.hold {
+  background: linear-gradient(90deg, #02ff56 0%, #fd3ad3 100%);
+  color: white;
+}
+.hide {
+  display: none;
+}
+.hovered {
+  border-top: 3px solid #7ed8ed;
 }
