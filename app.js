@@ -1,8 +1,23 @@
-const item = document.querySelector('.item')
+const items = document.querySelectorAll('.item')
 const placeholders = document.querySelectorAll('.placeholder')
+const input = document.querySelector('.js-input-form')
 
-item.addEventListener('dragstart',dragStart)
-item.addEventListener('dragend', dragEnd)
+input.addEventListener('submit', addTask)
+function addTask(event) {
+    let value='Hello'
+    let string=`<div class="item" draggable="true">${value}</div>`
+    event.preventDefault()
+    placeholders[0].insertAdjacentHTML('beforeend', string)
+}
+
+items.forEach(item => {
+   item.addEventListener('dragstart',(event)=> {
+    event.currentTarget.classList.add('hold')
+    setTimeout(()=>event.target.classList.add('hide'), 0)
+    
+})
+   item.addEventListener('dragend', dragEnd) 
+});
 
 placeholders.forEach(placeholder => {
   placeholder.addEventListener('dragover', dragover)
@@ -17,8 +32,9 @@ function dragStart(event) {
     
 }
 
+
 function dragEnd(event) {
-     event.currentTarget.className='item'
+     event.target.className='item'
 }
 
 function dragover(event) {
@@ -32,5 +48,5 @@ function dragleave(event) {
 }
 function dragdrop(event) {
     event.currentTarget.classList.remove('hovered')
-    event.currentTarget.append(item)
+    event.currentTarget.append(items[0])
 }

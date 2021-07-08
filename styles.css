@@ -14,6 +14,42 @@ body {
   margin: 0;
 }
 
+.form-container {
+  display: flex;
+  align-items: baseline;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+form input,
+.input {
+  width: 200px;
+  padding: 1em;
+  margin-bottom: 2em;
+  border: none;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5000px;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  box-shadow: 4px 4px 60px rgb(0 0 0 / 20%);
+  color: #000000;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  text-shadow: 2px 2px 4px rgb(0 0 0 / 20%);
+}
+form input[type="button"] {
+  margin: 5px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.input:hover {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 4px 4px 60px 8px rgb(0 0 0 / 20%);
+}
 .row {
   display: flex;
   width: 600px;
